@@ -9,7 +9,7 @@ public partial class CadastroEvento : ContentPage
         InitializeComponent();
 
         dtpck_inicio.Date = DateTime.Now;
-        dtpck_termino.Date = DateTime.Now.AddDays(1);
+        dtpck_termino.Date = DateTime.Now;
     }
 
     private async void Button_Clicked(object sender, EventArgs e)
@@ -33,7 +33,7 @@ public partial class CadastroEvento : ContentPage
                 Nome = txt_nome.Text,
                 Local = txt_local.Text,
                 DataInicio = dtpck_inicio.Date?? DateTime.Now,
-                DataTermino = dtpck_termino.Date ?? DateTime.Now.AddDays(1),
+                DataTermino = dtpck_termino.Date ?? DateTime.Now,
                 NumeroParticipantes = Convert.ToInt32(txt_participantes.Text),
                 CustoParticipante = Convert.ToDouble(txt_custo.Text)
             };

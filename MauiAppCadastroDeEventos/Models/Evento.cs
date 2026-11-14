@@ -5,7 +5,7 @@
         public string Nome { get; set; }
         public string Local { get; set; }
         public DateTime DataInicio { get; set; } = DateTime.Now;
-        public DateTime DataTermino { get; set; } = DateTime.Now.AddDays(1);
+        public DateTime DataTermino { get; set; } = DateTime.Now;
         public int NumeroParticipantes { get; set; }
         public double CustoParticipante { get; set; }
 
