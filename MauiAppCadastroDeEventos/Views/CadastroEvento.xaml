@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCadastroDeEventos.Views.CadastroEvento"
+             Title="Cadastro de Evento"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Primary}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Cadastrar Evento"
+                   FontSize="22"
+                   FontFamily="MontserratBold"
+                   HorizontalOptions="Center" />
+
+            <Label Text="Nome do Evento:" />
+            <Entry x:Name="txt_nome"
+                   TextColor="{StaticResource SecondaryDarkText}"
+                   BackgroundColor="{StaticResource White}"/>
+
+            <Label Text="Local do Evento:" />
+            <Entry x:Name="txt_local"
+                   TextColor="{StaticResource SecondaryDarkText}"
+                   BackgroundColor="{StaticResource White}" />
+
+            <Label Text="Data de Início:" />
+            <DatePicker x:Name="dtpck_inicio"
+                        Format="dd/MM/yyyy"
+                        TextColor="{StaticResource Primary}"
+                        BackgroundColor="{StaticResource White}"/>
+
+            <Label Text="Data de Término:" />
+            <DatePicker x:Name="dtpck_termino"
+                        Format="dd/MM/yyyy"
+                        TextColor="{StaticResource Primary}"
+                        BackgroundColor="{StaticResource White}"/>
+
+            <Label Text="Número de Participantes:" />
+            <Entry x:Name="txt_participantes"
+                   TextColor="{StaticResource SecondaryDarkText}"
+                   BackgroundColor="{StaticResource White}"/>
+
+            <Label Text="Custo por Participante (R$):" />
+            <Entry x:Name="txt_custo"
+                   TextColor="{StaticResource SecondaryDarkText}"
+                   BackgroundColor="{StaticResource White}" />
+
+            <Button Text="Cadastrar" 
+                    Clicked="Button_Clicked" 
+                    Margin="0,15,0,0"
+                    BackgroundColor="{StaticResource PrimaryDark}"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

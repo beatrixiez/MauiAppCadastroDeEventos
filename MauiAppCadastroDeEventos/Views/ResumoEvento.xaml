@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppCadastroDeEventos.Views.ResumoEvento"
+             Title="Resumo do Evento"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="{StaticResource Primary}">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Resumo do Evento" 
+                   FontSize="22"
+                   FontFamily="MontserratBold"
+                   HorizontalOptions="Center" />
+
+            <Frame Padding="15" CornerRadius="10" BackgroundColor="{StaticResource Gray100}">
+                <VerticalStackLayout Spacing="10">
+
+                    <Label Text="{Binding Nome, StringFormat='Evento: {0}'}" 
+                           FontSize="18" 
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource Primary}"/>
+
+                    <Label Text="{Binding Local, StringFormat='Local: {0}'}"
+                           TextColor="{StaticResource PrimaryDark}"/>
+
+                    <Label Text="{Binding DataTermino, StringFormat='Data de Término: {0:dd/MM/yyyy}'}"
+                           TextColor="{StaticResource PrimaryDark}"/>
+
+                    <Label Text="{Binding DuracaoEmDias, StringFormat='Duração do Evento: {0} dia(s)'}" 
+                           TextColor="{StaticResource PrimaryDark}"
+                           FontFamily="MontserratItalic"/>
+
+                    <Label Text="{Binding NumeroParticipantes, StringFormat='Participantes: {0}'}"
+                           TextColor="{StaticResource PrimaryDark}"/>
+
+                    <Label Text="{Binding CustoParticipante, StringFormat='Custo por Participante: {0:C}'}"
+                           TextColor="{StaticResource PrimaryDark}"/>
+
+                    <BoxView HeightRequest="1" Color="{StaticResource Gray500}" Margin="0,5" />
+
+                    <Label Text="{Binding CustoTotal, StringFormat='Custo Total: {0:c}'}" 
+                           FontSize="18" 
+                           FontAttributes="Bold" 
+                           TextColor="{StaticResource Tertiary}" />
+
+                </VerticalStackLayout>
+            </Frame>
+
+        </VerticalStackLayout>
+    </ScrollView>
+        
+</ContentPage>
